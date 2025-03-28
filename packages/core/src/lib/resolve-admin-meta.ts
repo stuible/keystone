@@ -138,6 +138,7 @@ const KeystoneAdminUIFieldGroupMeta = g.object<FieldGroupMetaSource>()({
   fields: {
     label: g.field({ type: g.nonNull(g.String) }),
     description: g.field({ type: g.String }),
+    collapsed: g.field({ type: g.Boolean }),
     fields: g.field({
       type: g.nonNull(g.list(g.nonNull(KeystoneAdminUIFieldMeta))),
     }),
