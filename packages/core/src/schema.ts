@@ -147,6 +147,7 @@ let i = 0
 export function group<ListTypeInfo extends BaseListTypeInfo>(config: {
   label: string
   description?: string
+  collapsed?: boolean,
   fields: BaseFields<ListTypeInfo>
 }) {
   const keys = Object.keys(config.fields)
@@ -159,6 +160,7 @@ export function group<ListTypeInfo extends BaseListTypeInfo>(config: {
       fields: keys,
       label: config.label,
       description: config.description ?? null,
+      collapsed: config.collapsed ?? false,
     },
     ...config.fields,
   } as BaseFields<ListTypeInfo> // TODO: FIXME, see initialise-lists.ts:getListsWithInitialisedFields

@@ -133,17 +133,19 @@ export function Fields({
 function FieldGroup({
   description,
   label,
+  collapsed,
   children,
 }: {
   label: string
-  description: string | null
+  description: string | null,
+  collapsed: boolean
   children: ReactNode
 }) {
   const labelId = useId()
   const descriptionId = useSlotId([Boolean(description)])
 
   return (
-    <details aria-labelledby={labelId} aria-describedby={descriptionId} open>
+    <details aria-labelledby={labelId} aria-describedby={descriptionId} open={!collapsed}>
       <HStack
         gap="medium"
         alignItems="center"
