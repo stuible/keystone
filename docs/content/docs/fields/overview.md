@@ -155,6 +155,7 @@ export default config({
 ## Groups
 
 Fields can be grouped together in the Admin UI using the `group` function, with a customisable `label` and `description`.
+By default, groups are displayed as expanded panels in the Admin UI. To have the panel appear collapsed when the page loads, set the `collapsed` option to `true`.
 
 ```typescript
 import { config, list, group } from '@keystone-6/core';
@@ -167,6 +168,7 @@ export default config({
         ...group({
           label: 'Group label',
           description: 'Group description',
+          collapsed: true,
           fields: {
             someFieldName: text({ /* ... */ }),
             /* ... */
