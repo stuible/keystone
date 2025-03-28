@@ -114,7 +114,7 @@ export function Fields({
               ]
               if (fields.length === 0) continue
               yield (
-                <FieldGroup key={group.label} label={group.label} description={group.description}>
+                <FieldGroup key={group.label} label={group.label} description={group.description} collapsed={group.collapsed}>
                   {fields}
                 </FieldGroup>
               )

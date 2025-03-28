@@ -92,6 +92,7 @@ export type FieldMeta = {
 export type FieldGroupMeta = {
   label: string
   description: string | null
+  collapsed: boolean
   fields: FieldMeta[]
 }
 
